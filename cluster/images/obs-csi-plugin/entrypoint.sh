@@ -32,8 +32,8 @@ fi
 
 echo "Starting install obsfs...."
 mkdir -p /dev/csi-tool/
-tar -zxvf /root/$fileName.tar.gz -C /dev/csi-tool/
-$HOST_CMD cp -r /dev/csi-tool/$fileName/. ./
+cp -Tr /root/ /dev/csi-tool/
+$HOST_CMD cp -Tr /dev/csi-tool/ ./
 $HOST_CMD bash install_obsfs.sh
 
 echo "Starting install obs socket-server...."
